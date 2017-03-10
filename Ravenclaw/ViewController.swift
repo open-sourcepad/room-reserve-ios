@@ -20,6 +20,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonBigConfTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "StartToSchedule", sender: sender)
+    }
 
+    @IBAction func buttonSmallConfTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "StartToSchedule", sender: sender)
+    }
+    
+    @IBAction func buttonSleepTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "StartToSchedule", sender: sender)
+    }
+    
+    @IBAction func buttonPumpTapped(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "StartToSchedule", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier! == "StartToSchedule" {
+            let dayVC = segue.destination as? CalendarDayViewController
+            dayVC?.roomNo = ((sender as? UIButton)?.tag)!
+        }
+    }
 }
 

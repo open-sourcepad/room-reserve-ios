@@ -1,14 +1,36 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HMw-Fb-0xX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Y1o-Dr-Wml">
+            <objects>
+                <navigationController id="HMw-Fb-0xX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kcK-nE-1lr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RVt-n5-Ba7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iJM-nz-YoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="-390"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ravenclaw" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +38,111 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-2c-lxl">
+                                <rect key="frame" x="16" y="83.5" width="343" height="500.5"/>
+                                <subviews>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nM-Zz-xcD">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
+                                        <state key="normal" title="Big Conference"/>
+                                        <connections>
+                                            <action selector="buttonBigConfTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IxA-GQ-xlH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENZ-uk-71K">
+                                        <rect key="frame" x="0.0" y="125" width="343" height="125.5"/>
+                                        <state key="normal" title="Small Conference"/>
+                                        <connections>
+                                            <action selector="buttonSmallConfTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L4W-k4-eYw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZo-cx-tmc">
+                                        <rect key="frame" x="0.0" y="250.5" width="343" height="125"/>
+                                        <state key="normal" title="Sleeping Room"/>
+                                        <connections>
+                                            <action selector="buttonSleepTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ysm-5G-DbK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXP-xU-tJb">
+                                        <rect key="frame" x="0.0" y="375.5" width="343" height="125"/>
+                                        <state key="normal" title="Pump Room"/>
+                                        <connections>
+                                            <action selector="buttonPumpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HLz-tO-cy1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cFa-2c-lxl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Bo-bG-PWX"/>
+                            <constraint firstItem="cFa-2c-lxl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BHv-uK-6ue"/>
+                            <constraint firstItem="cFa-2c-lxl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="BJB-P8-cHo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cFa-2c-lxl" secondAttribute="trailing" id="eGm-Gy-cgX"/>
+                            <constraint firstItem="cFa-2c-lxl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vbO-xX-J8l"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="UkZ-yS-SlD"/>
+                    <connections>
+                        <segue destination="b9F-sc-geR" kind="show" identifier="StartToSchedule" id="n86-Jj-Rk6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1004" y="-391.75412293853077"/>
+        </scene>
+        <!--Schedule-->
+        <scene sceneID="SOy-Wv-T25">
+            <objects>
+                <viewController id="b9F-sc-geR" customClass="CalendarDayViewController" customModule="Ravenclaw" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BCg-xa-yYE"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Qr-K4-HF0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b4G-zJ-3nW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Schedule" id="tdE-7S-rsQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="n4w-M0-YPC">
+                            <connections>
+                                <action selector="barButtonAddTapped:" destination="b9F-sc-geR" id="V0p-U6-DsH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Pk8-Xk-hsj" kind="show" identifier="ScheduleToAdd" id="Qen-zB-guk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fig-cJ-yqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879" y="-392"/>
+        </scene>
+        <!--Add Event-->
+        <scene sceneID="YkB-bQ-YcS">
+            <objects>
+                <viewController id="Pk8-Xk-hsj" customClass="AddViewController" customModule="Ravenclaw" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E3P-7E-ZGU"/>
+                        <viewControllerLayoutGuide type="bottom" id="jYS-Rc-Ux1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pba-vk-KwB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Event" id="cpw-aD-7X7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="6VR-gK-tex">
+                            <connections>
+                                <action selector="barButtonSaveTapped:" destination="Pk8-Xk-hsj" id="KSv-8e-Rov"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gux-nu-cVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2702" y="-393"/>
         </scene>
     </scenes>
 </document>

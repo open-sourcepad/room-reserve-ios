@@ -14,6 +14,9 @@
 		5459342D1E7271B10041B98B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5459342B1E7271B10041B98B /* LaunchScreen.storyboard */; };
 		545934381E7271B10041B98B /* RavenclawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545934371E7271B10041B98B /* RavenclawTests.swift */; };
 		545934431E7271B10041B98B /* RavenclawUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545934421E7271B10041B98B /* RavenclawUITests.swift */; };
+		545934511E7278FD0041B98B /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545934501E7278FD0041B98B /* DayViewController.swift */; };
+		545934541E728A160041B98B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545934531E728A160041B98B /* AddViewController.swift */; };
+		CBD1E377FD800A01BDE2550B /* Pods_Ravenclaw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE48FA27D233E9D7063BF82 /* Pods_Ravenclaw.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AE48FA27D233E9D7063BF82 /* Pods_Ravenclaw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ravenclaw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5459341F1E7271B10041B98B /* Ravenclaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ravenclaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545934221E7271B10041B98B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		545934241E7271B10041B98B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		5459343E1E7271B10041B98B /* RavenclawUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RavenclawUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		545934421E7271B10041B98B /* RavenclawUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavenclawUITests.swift; sourceTree = "<group>"; };
 		545934441E7271B10041B98B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		545934501E7278FD0041B98B /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		545934531E728A160041B98B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		D8FCD0776FBA3614DAB48227 /* Pods-Ravenclaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ravenclaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ravenclaw/Pods-Ravenclaw.release.xcconfig"; sourceTree = "<group>"; };
+		EDD2152C2FB7733D98FD5C75 /* Pods-Ravenclaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ravenclaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ravenclaw/Pods-Ravenclaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD1E377FD800A01BDE2550B /* Pods_Ravenclaw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C9BFF5E68D942E8B2F978D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2152C2FB7733D98FD5C75 /* Pods-Ravenclaw.debug.xcconfig */,
+				D8FCD0776FBA3614DAB48227 /* Pods-Ravenclaw.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		545934161E7271B10041B98B = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +99,8 @@
 				545934361E7271B10041B98B /* RavenclawTests */,
 				545934411E7271B10041B98B /* RavenclawUITests */,
 				545934201E7271B10041B98B /* Products */,
+				3C9BFF5E68D942E8B2F978D6 /* Pods */,
+				9FC4E8EF46BFA0E8A8C0E3EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +117,11 @@
 		545934211E7271B10041B98B /* Ravenclaw */ = {
 			isa = PBXGroup;
 			children = (
+				545934261E7271B10041B98B /* Main.storyboard */,
 				545934221E7271B10041B98B /* AppDelegate.swift */,
 				545934241E7271B10041B98B /* ViewController.swift */,
-				545934261E7271B10041B98B /* Main.storyboard */,
+				545934501E7278FD0041B98B /* DayViewController.swift */,
+				545934531E728A160041B98B /* AddViewController.swift */,
 				545934291E7271B10041B98B /* Assets.xcassets */,
 				5459342B1E7271B10041B98B /* LaunchScreen.storyboard */,
 				5459342E1E7271B10041B98B /* Info.plist */,
@@ -125,6 +147,14 @@
 			path = RavenclawUITests;
 			sourceTree = "<group>";
 		};
+		9FC4E8EF46BFA0E8A8C0E3EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AE48FA27D233E9D7063BF82 /* Pods_Ravenclaw.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 545934471E7271B10041B98B /* Build configuration list for PBXNativeTarget "Ravenclaw" */;
 			buildPhases = (
+				FD2E3BF54009B76010E709A9 /* [CP] Check Pods Manifest.lock */,
 				5459341B1E7271B10041B98B /* Sources */,
 				5459341C1E7271B10041B98B /* Frameworks */,
 				5459341D1E7271B10041B98B /* Resources */,
+				D7F663DAFD1AEBA892239984 /* [CP] Embed Pods Frameworks */,
+				299F62F929C4B9C9013A16C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +290,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		299F62F929C4B9C9013A16C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ravenclaw/Pods-Ravenclaw-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7F663DAFD1AEBA892239984 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ravenclaw/Pods-Ravenclaw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2E3BF54009B76010E709A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5459341B1E7271B10041B98B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +345,8 @@
 			files = (
 				545934251E7271B10041B98B /* ViewController.swift in Sources */,
 				545934231E7271B10041B98B /* AppDelegate.swift in Sources */,
+				545934541E728A160041B98B /* AddViewController.swift in Sources */,
+				545934511E7278FD0041B98B /* DayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +494,7 @@
 		};
 		545934481E7271B10041B98B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDD2152C2FB7733D98FD5C75 /* Pods-Ravenclaw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K5YXNWA3HQ;
@@ -424,6 +508,7 @@
 		};
 		545934491E7271B10041B98B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8FCD0776FBA3614DAB48227 /* Pods-Ravenclaw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K5YXNWA3HQ;
@@ -512,6 +597,7 @@
 				545934491E7271B10041B98B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5459344A1E7271B10041B98B /* Build configuration list for PBXNativeTarget "RavenclawTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +606,7 @@
 				5459344C1E7271B10041B98B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5459344D1E7271B10041B98B /* Build configuration list for PBXNativeTarget "RavenclawUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +615,7 @@
 				5459344F1E7271B10041B98B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
