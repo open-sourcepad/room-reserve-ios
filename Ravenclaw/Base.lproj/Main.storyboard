@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="122" y="-390"/>
         </scene>
-        <!--View Controller-->
+        <!--RooMarami-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Ravenclaw" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="RooMarami" id="BYZ-38-t0r" customClass="ViewController" customModule="Ravenclaw" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -40,49 +39,71 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-2c-lxl">
-                                <rect key="frame" x="16" y="83.5" width="343" height="500.5"/>
+                                <rect key="frame" x="16" y="72" width="343" height="587"/>
                                 <subviews>
-                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nM-Zz-xcD">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
-                                        <state key="normal" title="Big Conference"/>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nM-Zz-xcD">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="147"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Big Conference" backgroundImage="big"/>
                                         <connections>
                                             <action selector="buttonBigConfTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IxA-GQ-xlH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ENZ-uk-71K">
-                                        <rect key="frame" x="0.0" y="125" width="343" height="125.5"/>
-                                        <state key="normal" title="Small Conference"/>
+                                        <rect key="frame" x="0.0" y="147" width="343" height="146.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Small Conference" backgroundImage="small">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonSmallConfTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L4W-k4-eYw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZo-cx-tmc">
-                                        <rect key="frame" x="0.0" y="250.5" width="343" height="125"/>
-                                        <state key="normal" title="Sleeping Room"/>
+                                    <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZo-cx-tmc">
+                                        <rect key="frame" x="0.0" y="293.5" width="343" height="147"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Sleeping Room" backgroundImage="sleep">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonSleepTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ysm-5G-DbK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXP-xU-tJb">
-                                        <rect key="frame" x="0.0" y="375.5" width="343" height="125"/>
-                                        <state key="normal" title="Pump Room"/>
+                                        <rect key="frame" x="0.0" y="440.5" width="343" height="146.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Feeding Room" backgroundImage="pump">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="buttonPumpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HLz-tO-cy1"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="LZo-cx-tmc" firstAttribute="leading" secondItem="cFa-2c-lxl" secondAttribute="leading" id="0QQ-Pw-BS5"/>
+                                    <constraint firstAttribute="trailing" secondItem="LZo-cx-tmc" secondAttribute="trailing" id="OTJ-pU-VRR"/>
+                                    <constraint firstItem="ENZ-uk-71K" firstAttribute="leading" secondItem="cFa-2c-lxl" secondAttribute="leading" id="Suk-ae-U82"/>
+                                    <constraint firstAttribute="bottom" secondItem="WXP-xU-tJb" secondAttribute="bottom" id="TWS-aX-2xd"/>
+                                    <constraint firstAttribute="trailing" secondItem="ENZ-uk-71K" secondAttribute="trailing" id="Wvq-aT-DqX"/>
+                                    <constraint firstItem="2nM-Zz-xcD" firstAttribute="top" secondItem="cFa-2c-lxl" secondAttribute="top" id="Ydc-xe-LUa"/>
+                                    <constraint firstItem="WXP-xU-tJb" firstAttribute="leading" secondItem="cFa-2c-lxl" secondAttribute="leading" id="YoF-El-zAZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="2nM-Zz-xcD" secondAttribute="trailing" id="atR-Bp-Qb9"/>
+                                    <constraint firstAttribute="trailing" secondItem="WXP-xU-tJb" secondAttribute="trailing" id="awE-P5-2OE"/>
+                                    <constraint firstItem="2nM-Zz-xcD" firstAttribute="leading" secondItem="cFa-2c-lxl" secondAttribute="leading" id="gc8-Gc-Zwc"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cFa-2c-lxl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Bo-bG-PWX"/>
                             <constraint firstItem="cFa-2c-lxl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BHv-uK-6ue"/>
-                            <constraint firstItem="cFa-2c-lxl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="BJB-P8-cHo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cFa-2c-lxl" secondAttribute="bottom" constant="8" id="OQa-JZ-cew"/>
+                            <constraint firstItem="cFa-2c-lxl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WaK-Jx-7PW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cFa-2c-lxl" secondAttribute="trailing" id="eGm-Gy-cgX"/>
-                            <constraint firstItem="cFa-2c-lxl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vbO-xX-J8l"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="UkZ-yS-SlD"/>
+                    <navigationItem key="navigationItem" title="RooMarami" id="UkZ-yS-SlD"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="b9F-sc-geR" kind="show" identifier="StartToSchedule" id="n86-Jj-Rk6"/>
                     </connections>
@@ -145,4 +166,10 @@
             <point key="canvasLocation" x="2702" y="-393"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="big" width="1200" height="900"/>
+        <image name="pump" width="900" height="1200"/>
+        <image name="sleep" width="1200" height="900"/>
+        <image name="small" width="900" height="1200"/>
+    </resources>
 </document>
