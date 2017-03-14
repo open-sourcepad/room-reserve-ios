@@ -26,14 +26,12 @@ class CalendarDayViewController: DayViewController, AddVCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        dayView.dayHeaderView.delegate = self
         
-//        reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+        URLCache.shared.removeAllCachedResponses()
         getScheduleForDate(date: dayView.dayHeaderView.currentDate)
     }
     
@@ -90,6 +88,8 @@ class CalendarDayViewController: DayViewController, AddVCDelegate {
     }
     
     func getScheduleForDate(date: Date) {
+        URLCache.shared.removeAllCachedResponses()
+        
         let df = DateFormatter()
         df.dateFormat = "yyyy-MM-dd"
         let dateString = df.string(from: date)
@@ -113,8 +113,14 @@ class CalendarDayViewController: DayViewController, AddVCDelegate {
     
     func didFinishAddingSched() {
         _ = self.navigationController?.popViewController(animated: true)
-        
+         URLCache.shared.removeAllCachedResponses()
         getScheduleForDate(date: dayView.dayHeaderView.currentDate)
+    }
+    
+    func didFailAddingSched(error: String) {
+        let alert = UIAlertController(title: error, message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func parseResponse(data: NSDictionary) {

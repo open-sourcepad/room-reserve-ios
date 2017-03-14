@@ -150,18 +150,39 @@ class AddViewController: FormViewController {
             
             switch response.result {
             case .success(let data as NSDictionary):
+                let errorMessage = self.parseResponseDataForErrors(response: data)
+                if  errorMessage == "" {
+                    print("BOOM \(data)")
+                    self.delegate?.didFinishAddingSched()
+                }
+                else {
+                    self.delegate?.didFailAddingSched(error: errorMessage)
+                }
                 
-                print("BOOM \(data)")
-                self.delegate?.didFinishAddingSched()
             case .failure(let error):
                 print(error)
-                
+                 self.delegate?.didFailAddingSched(error: error.localizedDescription)
             default: ()
             }
         }
     }
+    
+    func parseResponseDataForErrors(response: NSDictionary) -> String {
+        let errorMessage = NSMutableString(string: "")
+        if let errors = response["errors"] {
+            for error in (errors as? NSArray)! {
+                errorMessage.append("\n\(error).")
+            }
+        }
+        else if let error = response["error"] {
+            errorMessage.append("\n\(error)")
+        }
+        return errorMessage as String
+    }
+    
 }
 
 protocol AddVCDelegate: class {
     func didFinishAddingSched()
+    func didFailAddingSched(error: String)
 }
